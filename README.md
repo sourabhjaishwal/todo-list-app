@@ -28,6 +28,7 @@ The application allows users to add tasks, mark them as completed, delete tasks,
 ```text
 js-todo-list/
 │
+├── assets
 ├── index.html
 ├── style.css
 ├── script.js
