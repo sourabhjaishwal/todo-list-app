@@ -10,30 +10,36 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+    /* Soft minimal background */
+    background-color: #eef2f7;
 }
 
+.page {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Main Heading */
+.page-title {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #252a34;
+}
+
+/* Todo Box */
 .todo-container {
     width: 100%;
-    max-width: 550px;
-
     padding: 30px;
-
     background-color: #ffffff;
-    border-radius: 12px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
 }
 
-.todo-container h1 {
-    margin-bottom: 25px;
-
-    text-align: center;
-    font-size: 32px;
-}
-
+/* Form */
 .todo-form {
     display: flex;
     gap: 10px;
@@ -42,109 +48,135 @@ body {
 
 .todo-form input {
     flex: 1;
-
-    padding: 12px 15px;
-
-    border: 1px solid #ccc;
-    border-radius: 6px;
-
-    font-size: 16px;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
     outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: #252a34;
+    background-color: #fafbfc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-form input::placeholder {
+    color: #9aa1ad;
 }
 
 .todo-form input:focus {
-    border-color: #333;
+    border-color: #8b95a7;
+    box-shadow: 0 0 0 3px rgba(139, 149, 167, 0.12);
 }
 
+/* Add Button */
 .todo-form button {
-    padding: 12px 20px;
-
+    padding: 13px 20px;
     border: none;
-    border-radius: 6px;
-
-    background-color: #222;
-    color: white;
-
-    font-size: 16px;
+    border-radius: 8px;
+    background-color: #252a34;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .todo-form button:hover {
-    background-color: #444;
+    background-color: #3b4250;
+    transform: translateY(-2px);
 }
 
+/* Todo List */
 .todo-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     list-style: none;
 }
 
+/* Individual Todo */
 .todo-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-
-    padding: 12px 15px;
-
-    border: 1px solid #ddd;
-    border-radius: 6px;
-
-    background-color: #fafafa;
+    padding: 13px 15px;
+    border: 1px solid #e4e7ec;
+    border-radius: 9px;
+    background-color: #fafbfc;
 }
 
+/* Todo Content */
 .todo-content {
     display: flex;
     align-items: center;
-    gap: 10px;
-
+    gap: 11px;
     flex: 1;
-
     min-width: 0;
 }
 
+/* Checkbox */
 .todo-checkbox {
     width: 18px;
     height: 18px;
-
+    flex-shrink: 0;
     cursor: pointer;
+    accent-color: #252a34;
 }
 
+/* Todo Text */
 .todo-text {
     word-break: break-word;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333945;
 }
 
 .todo-item.completed .todo-text {
+    color: #9aa1ad;
     text-decoration: line-through;
-    color: #888;
 }
 
+/* Delete Button */
 .delete-button {
-    padding: 8px 12px;
-
+    padding: 7px 11px;
     border: none;
-    border-radius: 5px;
-
-    background-color: #e63946;
-    color: white;
-
+    border-radius: 6px;
+    background-color: #f1f2f4;
+    color: #585d68;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .delete-button:hover {
-    background-color: #c1121f;
+    background-color: #ef4444;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
+/* Empty Message */
 .empty-message {
     text-align: center;
-    color: #777;
-    font-size: 15px;
+    color: #9aa1ad;
+    font-size: 14px;
 }
 
+/* Responsive Design */
 @media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    .page-title {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
     .todo-container {
         padding: 20px;
     }

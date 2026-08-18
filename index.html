@@ -4,28 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Todo List App</title>
+    <title>My Todo List</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <main class="todo-container">
-      <h1>My Todo List</h1>
+    <main class="page">
+      <!-- Page Heading -->
+      <h1 class="page-title">MY Todo List</h1>
 
-      <form id="todo-form" class="todo-form">
-        <input
-          type="text"
-          id="todo-input"
-          placeholder="Enter a task..."
-          autocomplete="off"
-        />
+      <!-- Todo Box -->
+      <div class="todo-container">
+        <form id="todo-form" class="todo-form">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="What needs to be done?"
+            autocomplete="off"
+          />
 
-        <button type="submit">Add</button>
-      </form>
+          <button type="submit">Add Task</button>
+        </form>
 
-      <ul id="todo-list" class="todo-list"></ul>
+        <ul id="todo-list" class="todo-list"></ul>
 
-      <p id="empty-message" class="empty-message">No tasks added yet.</p>
+        <p id="empty-message" class="empty-message">No tasks added yet.</p>
+      </div>
     </main>
 
     <script src="script.js"></script>
